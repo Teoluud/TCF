@@ -1,6 +1,8 @@
+#include <tuple>
+
 #ifndef datanalysis_h
 #define datanalysis_h
 
-void wavg(float data[], float errors[], int lenght);
+std::tuple<float, float> wavg(const float data[], const float errors[], int lenght);
 
 #endif

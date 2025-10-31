@@ -23,5 +23,6 @@ int main()
         error_array[i] = error;
     }
 
-    wavg(value_array, error_array, n_points);    
+    std::tuple<float, float> result = wavg(value_array, error_array, n_points);
+    std::cout << "The weighted average is: " << std::get<0>(result) << " +/- " << std::get<1>(result) << std::endl;
 }
