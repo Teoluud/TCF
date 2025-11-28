@@ -3,12 +3,12 @@
 class scattering
 {
 private:
-    particle2D *m_part1;
-    particle2D *m_part2;
+    particle2D &m_part1;
+    particle2D &m_part2;
     float m_l;
 
 public:
-    scattering (particle2D * part1, particle2D * part2, float l);
+    scattering (particle2D & part1, particle2D & part2, float l);
     //scattering (float pos1[2], float vel1[2], float pos2[2], float vel2[2]);
     ~scattering ();
     bool inSimulationArea(float xCenter, float yCenter);

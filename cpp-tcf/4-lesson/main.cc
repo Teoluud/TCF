@@ -3,8 +3,8 @@
 
 int main()
 {
-    particle2D *particleA = new particle2D(0., 0., 1., 0., 1.);
-    particle2D *particleB = new particle2D(5., 0., 0., 0., 1.);
+    particle2D particleA (0., 0., 1., 0., 1.);
+    particle2D particleB (5., 0., 0., 0., 1.);
     float simulationLimit = 100.;
     scattering scatter (particleA, particleB, simulationLimit);
     particle2D *resultParticle = scatter.simulateInelasticScattering();
@@ -12,10 +12,8 @@ int main()
         resultParticle->printState();
     else
     {
-        particleA->printState();
-        particleB->printState();
+        particleA.printState();
+        particleB.printState();
     }
     delete resultParticle;
-    delete particleA;
-    delete particleB;
 }
